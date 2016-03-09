@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDal", "ServiceDal\ServiceDal.csproj", "{DB89E692-72AF-411A-8314-AD8B7ACA871B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{F24BC967-7BC8-414C-BF89-6D0C0887089F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWcfAppIIS", "testWcfAppIIS\testWcfAppIIS.csproj", "{8B897304-75E1-40AA-87A1-211097D502F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB89E692-72AF-411A-8314-AD8B7ACA871B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB89E692-72AF-411A-8314-AD8B7ACA871B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB89E692-72AF-411A-8314-AD8B7ACA871B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB89E692-72AF-411A-8314-AD8B7ACA871B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F24BC967-7BC8-414C-BF89-6D0C0887089F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F24BC967-7BC8-414C-BF89-6D0C0887089F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F24BC967-7BC8-414C-BF89-6D0C0887089F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F24BC967-7BC8-414C-BF89-6D0C0887089F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B897304-75E1-40AA-87A1-211097D502F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B897304-75E1-40AA-87A1-211097D502F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B897304-75E1-40AA-87A1-211097D502F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B897304-75E1-40AA-87A1-211097D502F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
