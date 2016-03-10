@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDal", "ServiceDal\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{F24BC967-7BC8-414C-BF89-6D0C0887089F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWcfAppIIS", "testWcfAppIIS\testWcfAppIIS.csproj", "{8B897304-75E1-40AA-87A1-211097D502F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfAppIis", "testWcfAppIIS\TestWcfAppIis.csproj", "{8B897304-75E1-40AA-87A1-211097D502F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

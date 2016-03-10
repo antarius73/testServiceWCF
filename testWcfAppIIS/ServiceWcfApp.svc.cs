@@ -2,28 +2,36 @@
 using ServiceModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-namespace testWcfAppIIS
+namespace TestWcfAppIis
 {
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "ServiceWcfApp" à la fois dans le code, le fichier svc et le fichier de configuration.
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez ServiceWcfApp.svc ou ServiceWcfApp.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class ServiceWcfApp : IServiceWcfApp
     {
-        public List<Employee> GetAllEmployees()
+        public Collection<PersonModel> ListAll()
         {
             try
             {
-                List<Employee> arrEmployees = SqlManager.GetAllEmployeesDetails();
-                if (arrEmployees == null)
-                {
-                    throw new FaultException("EMPLOYEE NOT CODE");
-                }
-                return arrEmployees;
+                Collection<PersonModel> arrEmployees = null;
 
+                try
+                {
+                    arrEmployees = PersonDal.GetPersons();
+                    if (arrEmployees == null) throw new FaultException("EMPLOYEE NOT CODE");
+                }
+                catch (Exception e)
+                {
+                    throw (e);
+                }
+
+                return arrEmployees;
             }
             catch (Exception ex)
             {
@@ -31,11 +39,11 @@ namespace testWcfAppIIS
             }
         }
 
-        public Employee GetEmployee(string employeeId)
+        public PersonModel GetDetail(string personId)
         {
             try
             {
-                Employee employee = SqlManager.GetEmployeeDetails(Convert.ToInt32(employeeId));
+                PersonModel employee = PersonDal.GetPersonDetail(Convert.ToInt32(personId, CultureInfo.CurrentCulture));
                 if (employee == null)
                 {
                     throw new FaultException("EMPLOYEE NOT CODE");
@@ -49,11 +57,11 @@ namespace testWcfAppIIS
             }
         }
 
-        public void UpdateEmployeeName(string employeeId, string employeeName)
+        public void UpdateName(string personId, string name)
         {
             try
             {
-                SqlManager.UpdateEmployeeName(Convert.ToInt32(employeeId), employeeName);
+                PersonDal.UpdateEmployeeName(Convert.ToInt32(personId, CultureInfo.CurrentCulture), name);
             }
             catch (Exception ex)
             {

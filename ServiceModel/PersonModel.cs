@@ -1,13 +1,14 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
-
+[assembly: CLSCompliant(true)]
 namespace ServiceModel
 {
     [DataContract]
-    public class Employee 
+    public class PersonModel
     {
         [DataMember]
-        public int BusinessEntityID { get; set; }
+        public int BusinessEntityId { get; set; }
 
         [DataMember]
         public string Title { get; set; }
@@ -20,5 +21,8 @@ namespace ServiceModel
 
         [DataMember]
         public string LastName { get; set; }
+
+        [DataMember]
+        public DateTime LastDateModif { get; set; }
     }
 }
